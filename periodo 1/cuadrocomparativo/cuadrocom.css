@@ -1,0 +1,189 @@
+:root {
+    --oscuro: #440047;
+    --medio: #520654;
+    --claro: #5f0c60;
+    --so-claro: #6d116d;
+    --blanco: #f1f1f0;
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: var(--oscuro);
+    scroll-behavior: smooth;
+}
+/*---Main---*/
+.main {
+    height: 105dvh;
+    width: 100vw;
+    display: grid;
+    place-content: center;
+    background-image: url("../../img/elproblemaetico.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: var(--blanco);
+    backdrop-filter: blur(30px);
+    border-radius: 0 0 8px 8px;
+}
+
+.div_main {
+    width: 100vw;
+    height: 105vh;
+    display: grid;
+    place-content: center;
+    background: linear-gradient(#260e29c5, #260e29c5, var(--oscuro));
+    border-radius: 0 0 8px 8px;
+}
+
+.main img {
+    width: 100vw;
+}
+
+.text_main {
+    width: 100vw;
+    font-size: 6.7vw;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+.text_main1 {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 7px;
+}
+.logo{
+    margin: 0;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    padding: 0;
+    top: 0;
+    right: 0;
+
+}
+
+.logo img {
+    width: 100px;
+    height: 100px;
+}
+
+.logo a {
+    text-decoration: none;
+    color: var(--blanco);
+    text-align: center;
+}
+/*---NAVBAR---*/
+
+.navbar {
+    background-color: var(--blanco);
+    position: sticky;
+    bottom: 0;
+    width: 100vw;
+    border-radius: 10px 10px 0 0;
+    user-select: none;
+    z-index: 999;
+}
+
+.ul_navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0;
+    margin-left: 10px;
+}
+
+.li_navbar {
+    list-style: none;
+}
+
+.a_navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #000;
+    text-decoration: none;
+    padding-top: 25px;
+}
+.navbar_img {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    bottom: 24px;
+    background-color: var(--blanco);
+    padding: 5px;
+    border-radius: 50%;
+    transition: bottom 1s, background-color 1s;
+}
+
+.navbar_circle {
+    position: absolute;
+    bottom: 20px;
+    width: 46.5px;
+    height: 46.5px;
+    border-radius: 50%;
+    background-color: var(--oscuro);
+}
+/*---CUADRO COMPARATIVO---*/
+.cuadro {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: linear-gradient(#330435 ,var(--claro));
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 8px;
+    color: var(--blanco);
+    text-align: center;
+}
+
+.cuadro img {
+    width: 100%;
+
+}
+
+.cuadro1 {
+    z-index: 90;
+    border-radius: 8px 8px 0 0;
+}
+
+.cuadro2 {
+    position: relative;
+    top: -5px;
+    z-index: 1;
+    border-radius: 0px 0px 8px 8px;
+}
+
+.cuadroc {
+    scale: 1;
+    transition: scale 1s;
+}
+/*---HOVERS---*/
+.navbar_img:hover{
+    bottom: 32px;
+    background-color: var(--azul-so-claro);
+}
+
+.cuadroc:hover{
+    scale: 1.015;
+}
+
+@keyframes view {
+    0% {
+        opacity: 0; scale: 0%;
+    }
+    100% {
+        opacity: 1; scale: 100%;
+    }
+}
