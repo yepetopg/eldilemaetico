@@ -90,7 +90,7 @@ body {
 
 .Ing {
     background: linear-gradient(#113a92, var(--claro));
-    margin: 30px;
+    margin: 15px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -112,7 +112,7 @@ body {
 /*---Instrucciones---*/
 .Ins {
     background-color: var(--claro);
-    margin: 30px;
+    margin: 15px;
     display: flex;
     justify-content: center;
     flex-direction: column;
