@@ -90,7 +90,7 @@ body {
     gap: 90px;
     width: 100vw;
     place-content: center;
-    grid-auto-rows: 170px;
+    grid-auto-rows: 180px;
     color: var(--blanco);
 }
 .items_grid {
