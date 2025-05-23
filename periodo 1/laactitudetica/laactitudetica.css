@@ -1,0 +1,263 @@
+:root {
+    --oscuro: #091d36;
+    --medio: #214288;
+    --claro: #4377c5;
+    --so-claro: #c2d2e9;
+    --blanco: #f1f1f0;
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: var(--oscuro);
+    scroll-behavior: smooth;
+}
+/*---Main---*/
+.main {
+    height: 105dvh;
+    width: 100vw;
+    display: grid;
+    place-content: center;
+    background-image: url("../../img/laactitudetica.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: var(--blanco);
+    backdrop-filter: blur(30px);
+    border-radius: 0 0 8px 8px;
+}
+
+.div_main {
+    width: 100vw;
+    height: 105vh;
+    display: grid;
+    place-content: center;
+    background: linear-gradient(#0e0e29c5, #0e0e29c5, var(--oscuro));
+    border-radius: 0 0 8px 8px;
+}
+
+.main img {
+    width: 100vw;
+}
+
+.text_main {
+    width: 100vw;
+    font-size: 6.7vw;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+.text_main1 {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 7px;
+}
+.logo{
+    margin: 0;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    padding: 0;
+    top: 0;
+    right: 0;
+
+}
+
+.logo img {
+    width: 100px;
+    height: 100px;
+}
+
+.logo a {
+    text-decoration: none;
+    color: var(--blanco);
+    text-align: center;
+}
+/*---conceptos---*/
+.conceptos_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 110px;
+    width: 100vw;
+    place-content: center;
+    grid-auto-rows: 190px;
+    color: var(--blanco);
+}
+.items_grid {
+    display: flex;
+    justify-content: center;
+    background-color: var(--claro);
+    margin-left: 15px;
+    margin-right: 15px;
+    border-radius: 8px;
+    height: 270px;
+    scale: 1;
+    transition: scale 1s;
+    text-align: center;
+    animation: view both;
+    animation-timeline: view();
+    animation-range: cover 15% cover 45%;
+}
+
+
+.items_grid a {
+    color: var(--blanco);
+    font-weight: 700;
+}
+
+.h2_grid {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin-top: 7px;
+    justify-content: center;
+    margin-right: 10px;
+    word-wrap: break-word;
+}
+
+.h2_grid p {
+    margin-top: 10px;
+}
+
+.img_grid {
+    width: 40%;
+    margin-right: 10px;
+    border-radius: 8px 0 0 8px;
+}
+/*---prueba---*/
+.div {
+    height: 20vh;
+}
+/*---Referecias---*/
+
+.Ins {
+    background-color: var(--claro);
+    margin: 20px;
+    margin-top: 200px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 8px;
+    width: 90vw;
+    height: fit-content;
+    animation: view both;
+    animation-timeline: view();
+    animation-range: cover 15% cover 45%;
+    transform: translateX(0%);
+    padding: 20px;
+    color: var(--blanco);
+}
+
+.Ins li {
+    list-style: none;
+    list-style: circle;
+    margin: 10px;
+}
+
+.Ins a {
+    color: var(--blanco);
+    font-weight: 700;
+}
+
+.cita1 {
+    position: relative;
+    top: 130px;
+}
+
+.cita {
+    position: absolute;
+    left: 7px;
+    font-size: 12px;
+    top: -12px;
+    text-decoration: none;
+}
+/*---Navbar---*/
+
+.navbar {
+    background-color: var(--blanco);
+    position: sticky;
+    bottom: 0;
+    width: 100vw;
+    border-radius: 10px 10px 0 0;
+    user-select: none;
+    z-index: 999;
+}
+
+.ul_navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0;
+    margin-left: 10px;
+}
+
+.li_navbar {
+    list-style: none;
+}
+
+.a_navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #000;
+    text-decoration: none;
+    padding-top: 25px;
+}
+.navbar_img {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    bottom: 24px;
+    background-color: var(--blanco);
+    padding: 5px;
+    border-radius: 50%;
+    transition: bottom 1s, background-color 1s;
+}
+
+.navbar_circle {
+    position: absolute;
+    bottom: 20px;
+    width: 46.5px;
+    height: 46.5px;
+    border-radius: 50%;
+    background-color: var(--oscuro);
+}
+/*---Animations*/
+@keyframes view {
+    0% {
+        opacity: 0; scale: 0%;
+    }
+    100% {
+        opacity: 1; scale: 100%;
+    }
+}
+
+/*---Media Q---*/
+@media screen and (max-width: 600px) {
+    .items_grid{
+        height: 350px;
+    }
+
+    .conceptos_grid {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 180px;
+    }
+
+}
+
+@media screen and (min-width: 650px){
+    .items_grid:last-child {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+}
